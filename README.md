@@ -27,6 +27,7 @@
    Подробнее можно прочитать здесь:
 
    https://help.reg.ru/support/dns-servery-i-nastroyka-zony/rabota-s-dns-serverami/fayl-hosts-gde-nakhoditsya-i-kak-yego-izmenit#2
+
 8) Запустите команду docker-compose up --build
 ```shell
    docker-compose up --build
