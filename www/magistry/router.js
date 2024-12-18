@@ -123,6 +123,7 @@ function init() {
                             data = JSON.parse(data);
                             let interval = data[0]
                             interval = interval.toString().replace(',', ' - ');
+                            interval = interval == '0' ? 'Нет доступных интервалов на сегодня' : interval;
                             let time = data[1]
                             time = time.toString().replace('minutes', 'минут').replace('hour', 'часов').replace('-', ' - ');
 
