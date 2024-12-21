@@ -9,3 +9,4 @@
 python_code/__pycache__/*
 python_code/.idea/*
 www/magistry/.idea
+**/__pycache__/
