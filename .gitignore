@@ -4,3 +4,5 @@
 .DS_Store
 /buildtest
 /.idea
+/python_code/__pycache__/*
+/python_code/.idea/*

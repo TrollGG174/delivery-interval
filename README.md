@@ -8,6 +8,21 @@
 - FastAPI
 - Torch
 
+## Структура файлов для работы с нейросетью
+Папка /python_code:
+```
+-- .env (Переменные окружения для работы с нейросетью)
+-- api.py (Методы для работы с API)
+-- data.py (Загрузка данных для обучения модели)
+-- models.py (Модель нейронной сети)
+-- preprocessing.py (Обработка данных для обучения)
+-- train.py (Код для обучения модели)
+-- utils.py (Вспомогательные функции)
+-- main.py (Код для запуска обучения модели, по умолчанию выключено в .env)
+-- timegen.py (Код для генерации данных для обучения модели)
+-- ready_set.py (Подготовленный массив сгенерированных данных для обучения)
+-- requirements.txt (Список библиотек для нормальной работы кода)
+```
 
 ## Установка
 
@@ -18,7 +33,7 @@
    git clone https://github.com/TrollGG174/delivery-interval.git
 ```
 4) Сконфигурируйте файл .env при необходимости
-5) Укажите ключ Яндекс API в файле /www/magistry/router.html вместо ###
+5) Укажите ключ Яндекс API в файле /www/magistry/config.php
 6) Откройте папку с репозиторием через терминал
 7) Отредактируйте файл hosts и добавьте туда запись
 ```shell
@@ -28,9 +43,9 @@
 
    https://help.reg.ru/support/dns-servery-i-nastroyka-zony/rabota-s-dns-serverami/fayl-hosts-gde-nakhoditsya-i-kak-yego-izmenit#2
 
-8) Запустите команду docker-compose up --build
-```shell
-   docker-compose up --build
+8) Запустите команду docker compose up --build
+```shell[venv](venv)
+   docker compose up --build
 ```
 9) Если все прошло успешно, то сайт будет доступен по следующему адресу http://magistry:8081/
 

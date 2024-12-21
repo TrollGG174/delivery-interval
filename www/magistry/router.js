@@ -1,32 +1,40 @@
+// В работе используется версия API Яндекс.Карты 2.1, официальная документация:
+// https://yandex.ru/dev/jsapi-v2-1/doc/ru/
+
+// Ждем загрузки API Яндекс.Карт и запускаем инициализацию карты
 ymaps.ready(init);
 
 function init() {
 
+    // Переменная для подсчета количества кликов на карте
     let clicks = 0;
 
+    // Создание карты с заданными параметрами
     var myMap = new ymaps.Map("map", {
-        center: [55.168349, 61.390194],
+        center: [55.168349, 61.390194], // Центр карты
         zoom: 13,
     }, {
-        searchControlProvider: 'yandex#search',
-        restrictMapArea: [[55.276992, 61.234321], [55.050197, 61.589074]],
+        searchControlProvider: 'yandex#search', // Использование контроллеров Яндекса
+        restrictMapArea: [[55.276992, 61.234321], [55.050197, 61.589074]], // Ограничение области карты
     });
 
+    // Убираем стандартную панель управления пробками
     myMap.controls.remove('trafficControl');
 
+    // Создаем и настраиваем контроль трафика
     var trafficControl = new ymaps.control.TrafficControl({ state: {
-            // Отображаются пробки "Сейчас".
-            providerKey: 'traffic#actual',
-            // Начинаем сразу показывать пробки на карте.
-            trafficShown: true,
-            infoLayerShown: true,
+            providerKey: 'traffic#actual', // Используем актуальные данные о пробках
+            trafficShown: true, // Показываем пробки на карте
+            infoLayerShown: true, // Отображаем информационный слой
         }});
-    // Добавим контрол на карту.
+    // Добавляем контроль трафика на карту
     myMap.controls.add(trafficControl);
 
+    // Переменные для хранения координат точек
     let firstPoint = [];
     let secondPoint = [];
 
+    // Функция ожидания появления текста в элементе трафика для заполнения начальных данных о пробках и времени
     function waitForText(selector, callback) {
         const interval = setInterval(function () {
             const element = $(selector);
@@ -37,6 +45,7 @@ function init() {
         }, 100); // Периодичность проверки каждые 100 мс
     }
 
+    // Заполняем элементы трафика и времени
     waitForText('.ymaps-2-1-79-float-button_traffic_left.ymaps-2-1-79-_checked .ymaps-2-1-79-float-button-text', function(element) {
         if($('.customSelectControl').val() == 0)
             $('.customSelectControl').val($('.ymaps-2-1-79-float-button_traffic_left.ymaps-2-1-79-_checked .ymaps-2-1-79-float-button-text').text().split(' ')[0]);
@@ -46,20 +55,24 @@ function init() {
 
     });
 
+     // Обработчик нажатия клавиши "C" для сброса точек и данных
     $(document).on('keypress',function(e) {
         if(e.which == 99) {
             firstPoint = [];
             secondPoint = [];
             $('.customTimeControl').val($('.ymaps-2-1-79-float-button_traffic_left.ymaps-2-1-79-_checked .ymaps-2-1-79-float-button-text').text().split(' ')[2]);
             $('.customSelectControl').val($('.ymaps-2-1-79-float-button_traffic_left.ymaps-2-1-79-_checked .ymaps-2-1-79-float-button-text').text().split(' ')[0]);
+            $('.customControl').hide().html('');
             myMap.geoObjects.removeAll();
         }
     });
 
+    // Обработчик клика по карте для добавления точек и построения маршрута
     myMap.events.add('click', function (e) {
         if (!myMap.balloon.isOpen()) {
             var coords = e.get('coords');
             if(!firstPoint.length){
+                // Добавляем первую точку
                 firstPoint = [coords[0].toPrecision(6), coords[1].toPrecision(6)];
                 myGeoObject = new ymaps.GeoObject({
                     geometry: {
@@ -74,20 +87,22 @@ function init() {
                 });
                 myMap.geoObjects.add(myGeoObject);
             }else if(!secondPoint.length){
+                // Добавляем вторую точку
                 secondPoint = [coords[0].toPrecision(6), coords[1].toPrecision(6)];
             }
 
+            // Если обе точки добавлены, строим маршрут
             if(firstPoint.length && secondPoint.length) {
 
                 let currentTraffic = $('.customSelectControl').val() != 0 ? $('.customSelectControl').val() : $('.ymaps-2-1-79-float-button_traffic_left.ymaps-2-1-79-_checked .ymaps-2-1-79-float-button-text').text().split(' ')[0];
                 let currentTime = $('.customTimeControl').val() != '' ? $('.customTimeControl').val() : $('.ymaps-2-1-79-float-button_traffic_left.ymaps-2-1-79-_checked .ymaps-2-1-79-float-button-text').text().split(' ')[2];
 
-
+                // Запрашиваем маршрут от первой до второй точки
                 ymaps.route([
                     firstPoint,
                     secondPoint
                 ]).then(function (route) {
-                    myMap.geoObjects.add(route);
+                    myMap.geoObjects.add(route); // Добавляем маршрут на карту
                     // Зададим содержание иконок начальной и конечной точкам маршрута.
                     // С помощью метода getWayPoints() получаем массив точек маршрута.
                     // Массив транзитных точек маршрута можно получить с помощью метода getViaPoints.
@@ -114,6 +129,7 @@ function init() {
                     }
                     distance = distance.toFixed(0);
 
+                    // Отправляем запрос на сервер для получения интервалов доставки
                     $.ajax({
                         url: 'http://127.0.0.1:8000/intervals/',         /* Куда пойдет запрос */
                         method: 'get',             /* Метод передачи (post или get) */
@@ -138,6 +154,7 @@ function init() {
                                         function (res) {
                                             let secondName = res.geoObjects.get(0).properties.get('name');
 
+                                            // Отображаем результаты на экране
                                             $('.customControl').show().html(
                                                 '<p>Точка отправления: ' + firstName + '</p>' +
                                                 '<p>Точка прибытия: ' + secondName + '</p>' +
@@ -168,9 +185,10 @@ function init() {
             }
         }
         else {
-            myMap.balloon.close();
+            myMap.balloon.close(); // Закрываем баллон при повторном клике
         }
 
+        // Обработчик правого клика для сброса второй точки
         myMap.events.add('contextmenu', function (){
             secondPoint = [];
             myMap.geoObjects.removeAll();
@@ -190,6 +208,7 @@ function init() {
         });
     });
 
+    // Создание пользовательского контрола для отображения подсказок
     CustomControlClass = function (options) {
         CustomControlClass.superclass.constructor.call(this, options);
         this._$content = null;
@@ -222,6 +241,7 @@ function init() {
         },
     });
 
+    // Добавляем контрол для подсказки
     var customControlHelp = new CustomControlClass();
     myMap.controls.add(customControlHelp, {
         position: {
@@ -254,6 +274,7 @@ function init() {
         },
     });
 
+    // Добавляем контрол для вывода информации о доставке
     var customControl = new CustomControlClass();
     myMap.controls.add(customControl, {
         float: 'none',
@@ -288,6 +309,7 @@ function init() {
         },
     });
 
+    // Добавление селектора выбора трафика
     var customSelectControl = new CustomControlClass();
     myMap.controls.add(customSelectControl, {
         float: 'none',
@@ -319,6 +341,7 @@ function init() {
         },
     });
 
+    // Добавление селектора выбора времени
     var customTimeControl = new CustomControlClass();
     myMap.controls.add(customTimeControl, {
         float: 'none',

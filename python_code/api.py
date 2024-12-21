@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
-from deliveryPredictor import intervals
+from utils import intervals
 
 app = FastAPI()
 
