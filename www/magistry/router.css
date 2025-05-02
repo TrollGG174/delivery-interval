@@ -1,0 +1,43 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial;
+    font-size: 14px;
+}
+#list {
+    padding: 10px;
+}
+#map {
+    width: 100%; height: 100%;
+}
+
+.customControlHelp {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.customControl {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#my-listbox {
+    top: auto;
+    left: auto;
+}
+
+.customSelectControl {
+    max-width: 100px;
+}
+
+.customTimeControl {
+    max-width: 100px;
+}

@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   webserver:
     build:
@@ -9,8 +7,6 @@ services:
     ports:
       - "8081:80"
       - "8444:443"
-    # links:
-    #   - database
     volumes:
       - ${DOCUMENT_ROOT-./www}:/var/www/html:rw
       - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
@@ -41,3 +37,4 @@ services:
     ports:
       - "8000:8000"
     restart: always
+
