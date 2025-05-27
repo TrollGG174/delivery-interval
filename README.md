@@ -55,16 +55,19 @@
 - При первом нажатии на карту задается точка отправления
 - При втором нажатии задается точка прибытия и строется маршрут
 - После построения маршрута отправляется запрос к API нейросети на python для получения интервала и примерного времени доставки
-![Points mode] (https://github.com/TrollGG174/delivery-interval/blob/main/img/PointsMode.png)
+
+![Points mode](https://github.com/TrollGG174/delivery-interval/blob/main/img/PointsMode.png)
 2) Магазины (Shops):
 - На карте отображаются только те точки, в которых есть все товары из корзины
 - При добавлении/удалении товаров меняются точки на карте
 - По клику строится маршрут до ближайшей точки
-![Shops mode] (https://github.com/TrollGG174/delivery-interval/blob/main/img/ShopsMode.png)
+
+![Shops mode](https://github.com/TrollGG174/delivery-interval/blob/main/img/ShopsMode.png)
 3) Склады (Warehouse):
 - По клику на карту строится кратчайший маршрут точек, которые покрывают текущий заказ
 - Изначальная проверка полного содержания корзины на одной точке, затем на комбинации двух точек, на трех и т. д.
-![Warehouses mode] (https://github.com/TrollGG174/delivery-interval/blob/main/img/WarehousesMode.png)
+
+![Warehouses mode](https://github.com/TrollGG174/delivery-interval/blob/main/img/WarehousesMode.png)
 ## Управление
 - В полях сверху можно задавать произвольное время и трафиик на дороге
 - При нажатии правой кнопки мыши точка прибытия удаляется и можно задать другую
