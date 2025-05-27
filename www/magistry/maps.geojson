@@ -1,0 +1,351 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "Без названия",
+    "creator": "Yandex Map Constructor"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "coordinates": [
+          61.298773,
+          55.147676
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 19л – 2шт,</br>\nАрхыз 19л – 4шт,</br>\nНиагара 5л – 15шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nПрибрежная ул., 2, посёлок Шершни, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "coordinates": [
+          61.310314,
+          55.171423
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт,</br>\nАрхыз 19л – 3шт,</br>\nНиагара 5л – 10шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nул. Университетская Набережная, 64, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "coordinates": [
+          61.362164,
+          55.191721
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 5л – 10шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nул. Чайковского, 20Б, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "coordinates": [
+          61.381075,
+          55.157117
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт,</br>\nНиагара 19л – 5шт,</br>\nАрхыз 19л – 3шт",
+        "balloonContentFooter": "</br>\nул. Сони Кривой, 59, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "coordinates": [
+          61.383819,
+          55.143003
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 5л – 10шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nул. Блюхера, 8, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "coordinates": [
+          61.428473,
+          55.132643
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт,</br>\nНиагара 19л – 5шт,</br>\nАрхыз 19л – 3шт,</br>\nНиагара 5л – 10шт",
+        "balloonContentFooter": "</br>\nул. Дзержинского, 105/1, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "coordinates": [
+          61.487752,
+          55.108812
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Архыз 19л – 3шт",
+        "balloonContentFooter": "</br>\nБугурусланский пер., 1А, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "coordinates": [
+          61.304182,
+          55.181725
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff",
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт,</br>\nНиагара 19л – 5шт,</br>\nАрхыз 19л – 3шт,</br>\nНиагара 5л – 10шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nул. 40-летия Победы, 30, Челябинск"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "coordinates": [
+          61.386361,
+          55.121335
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт",
+        "balloonContentFooter": "</br>\nТроицкий тракт, 20Б, стр. 1, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "coordinates": [
+          61.264815,
+          55.130868
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 19л – 5шт,</br>\nАрхыз 19л – 3шт",
+        "balloonContentFooter": "</br>\nИзумрудная ул., 8Б, микрорайон Вишнёвая Горка, посёлок Западный",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "coordinates": [
+          61.373436,
+          55.171119
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт,</br>\nНиагара 19л – 5шт",
+        "balloonContentFooter": "</br>\nул. Труда, 166/4, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "coordinates": [
+          61.284306,
+          55.18916
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 5шт",
+        "balloonContentFooter": "</br>\nул. Чичерина, 5В, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "coordinates": [
+          61.380714,
+          55.192213
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 5л – 10шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nКомсомольский просп., 10/16, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "coordinates": [
+          61.444029,
+          55.116624
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара Premium 19л – 2шт,</br>\nНиагара 19л – 5шт",
+        "balloonContentFooter": "</br>\nНовороссийская ул., 118В/1, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "coordinates": [
+          61.331547,
+          55.199235
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Архыз 19л – 3шт,</br>\nНиагара 5л – 10шт,</br>\nНиагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nул. Молодогвардейцев, 19, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "coordinates": [
+          61.455299,
+          55.172765
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 19л – 5шт",
+        "balloonContentFooter": "</br>\nСалютная ул., 8, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "coordinates": [
+          61.234901,
+          55.184197
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 1.5л – 15шт",
+        "balloonContentFooter": "</br>\nЛасковая ул., 23, посёлок Пригородный",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "coordinates": [
+          61.285224,
+          55.186046
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 5л – 10шт",
+        "balloonContentFooter": "</br>\nКомсомольский просп., 113/1, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "coordinates": [
+          61.486196,
+          55.107972
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "balloonContentHeader": "Продажа воды",
+        "balloonContentBody": "Ниагара 19л – 5шт,</br>\nАрхыз 19л – 3шт",
+        "balloonContentFooter": "</br>\nНовороссийская ул., 30, Челябинск",
+        "iconCaption": "Ниагара",
+        "marker-color": "#1e98ff"
+      }
+    }
+  ]
+}
